@@ -1,0 +1,189 @@
+新平台-[后端查询条件]及[客户端字符串表达式计算]函数扩展 需求编写:夏立军2019-1-3
+
+
+//数值+字符+日期 [通用比较逻辑]
+FuncName="Equals" Des="等于"  = 
+FuncName="DoesNotEqual" Des="不等于" ！= 
+FuncName="Greater" Des="大于"  >
+FuncName="GreaterOrEqual" Des="大于或等于" >=
+FuncName="Less" Des="小于" <
+FuncName="LessOrEqual" Des="小于或等于" <=
+
+// FuncName="NoneOf" Des="不是右列之一" 
+// FuncName="AnyOf" Des="是右列之一" 
+// FuncName="NotBetween" Des="不介于" 
+
+// FuncName="Between" Des="介于" TODO---
+
+
+FuncName="In" Des="存在于"
+// FuncName="IsNull" Des="资料空白" 
+// FuncName="IsNotNull" Des="不是空白" 
+
+//字符串类-[比较逻辑]
+FuncName="BeginsWith" Des="开头是" //
+FuncName="EndsWith" Des="结尾是" 
+FuncName="Contains" Des="内含"   =>Like
+FuncName="Like" Des="近似于" 
+// FuncName="NotLike" Des="非近似于" //不包含
+FuncName="DoesNotContain" Des="不内含" //like  false
+
+
+
+FuncName="IsNullOrEmpty" Des="空" =》Not
+FuncName="IsNotNullOrEmpty" Des="不为空" 
+// FuncName="BinaryOperatorLike" Des="相似"
+
+
+
+//数值类-多值运算比较
+FuncName="Avg" Des="Avg平均" 
+FuncName="Count" Des="计数" //length
+
+// FuncName="Exists" Des="存在"  TODO
+FuncName="Max" Des="最大" 
+FuncName="Min" Des="最小" 
+FuncName="Sum" Des="和" 
+
+//数值类-单值运算处理
+FuncName="Abs" Des="绝对值" 
+FuncName="Acos" Des="余弦值" 
+FuncName="Log" Des="自然对数" 
+FuncName="Log10" Des="Log10" 
+FuncName="Asin" Des="反正弦值" 
+FuncName="Atn" Des="反正切值" 
+FuncName="Atn2" Des="反正切值" 
+FuncName="BigMul" Des="乘积" *
+FuncName="Cos" Des="余弦值" 
+FuncName="Cosh" Des="双曲余弦值" 
+FuncName="Exp" Des="幂次方" 
+FuncName="Reverse" Des="反转" 
+FuncName="Rnd" Des="随机数" 
+FuncName="Round" Des="四舍五入" 
+FuncName="Sign" Des="返回实参的符号" 
+
+FuncName="Sin" Des="正弦值" 
+FuncName="Sinh" Des="双曲函数" 
+FuncName="Sqr" Des="平方根" 
+FuncName="Power" Des="开N次方" 
+FuncName="Tan" Des="正切函数" 
+FuncName="Tanh" Des="双曲正切" 
+
+
+//字符串类-单值运算处理
+FuncName="PadLeft" Des="左补齐" 
+FuncName="PadRight" Des="右补齐" 
+FuncName="Concat" Des="字符串连接" 
+FuncName="Remove" Des="移去" 
+FuncName="Replace" Des="字符替换" 
+FuncName="Trim" Des="去除空白" 
+FuncName="Lower" Des="小写" 
+FuncName="Upper" Des="转成大写" 
+FuncName="Len" Des="长度" 
+FuncName="Substring" Des="字串中取值" 
+
+//日期类-返回单个日期
+FuncName="GetDate" Des="返回日期部分" 
+
+
+FuncName="DayOfWeek" Des="返回日期星期几" 
+
+FuncName="Hour" Des="返回小时部分" 
+FuncName="MilliSecond" Des="返回毫秒部分" 
+FuncName="Minute" Des="返回分种部分" 
+FuncName="Second" Des="返回秒部分" 
+
+FuncName="Month" Des="返回月部分"
+FuncName="Year" Des="返回年部分" 
+
+//日期类-日期加减运算处理
+FuncName="AddDays" Des="加天" 
+FuncName="AddHours" Des="加小时" 
+FuncName="AddMilliSeconds" Des="加毫秒" 
+FuncName="AddMinutes" Des="加分钟" 
+FuncName="AddMonths" Des="加月" 
+FuncName="AddSeconds" Des="加秒" 
+FuncName="AddYears" Des="加年" 
+FuncName="AddQuarters" Des="加季度" 
+FuncName="AddWeeks" Des="加周" 
+
+ 
+// FuncName="AddTicks" Des="加时间ticks" 
+// FuncName="AddTimeSpan" Des="加时间span" 
+
+
+//日期类-两个日期运算处理
+FuncName="DiffDay" Des="时间差天数" 
+FuncName="DiffHour" Des="时间差小时数" 
+FuncName="DiffMilliSecond" Des="时间差毫秒数"
+FuncName="DiffMinute" Des="时间差分钟数" 
+FuncName="DiffMonth" Des="时间差月数" 
+FuncName="DiffSecond" Des="时间差秒数" 
+FuncName="DiffDate" Des="时间差tick" 
+FuncName="DiffYear" Des="时间差年数"
+
+
+//日期类-[通用比较逻辑]
+//  BeyondThisYear(createdate) 
+// FuncName="BeyondThisYear" Des="晚于今年" 
+FuncName="EarlierThisYear" Des="早于今年" 
+FuncName="LaterThisYear" Des="晚于今年" 
+FuncName="PriorThisYear" Des="是去年" 
+FuncName="IsThisYear" Des="本年" 
+FuncName="NextYear" Des="明年" 
+
+FuncName="LaterThisMonth" Des="晚于本月" 
+FuncName="EarlierThisMonth" Des="早于本月" 
+FuncName="IsThisMonth" Des="本月" 
+FuncName="NextMonth" Des="下个月" 
+
+FuncName="EarlierThisWeek" Des="早于本周" 
+FuncName="LaterThisWeek" Des="晚于本周" 
+FuncName="LastWeek" Des="是上一周" 
+FuncName="NextWeek" Des="是下一周" 
+FuncName="TwoWeeksAway" Des="二周之后" 
+FuncName="IsThisWeek" Des="本周" 
+
+
+
+FuncName="Today" Des="是今天" 
+FuncName="Tomorrow" Des="是明天" 
+FuncName="Yesterday" Des="是昨天" 
+FuncName="DayAfterTomorrow" Des="明天之后" 
+
+
+
+
+
+//不同类型转换
+FuncName="ToDecimal" Des="转换为十进制" 
+FuncName="ToDouble" Des="转换为双精度" 
+FuncName="ToFloat" Des="转换为浮点数" 
+FuncName="ToInt" Des="转换为整数" 
+// FuncName="ToLong" Des="转换为大整数" 
+FuncName="ToStr" Des="转为字符" 
+
+
+
+//全局变量
+FuncName="currentUser" Des="当前登录用户"  //Oid/UserName/Name/Email/ Role/ DevRole/BelongCompany/BelongDepartment/BelongSTORE
+FuncName="currentAudit" Des="当前审计项目" 
+FuncName="currentProj" Des="当前工作项目" 
+....
+
+
+//其他常量
+FuncName="UtcNow" Des="世界协调时间" 
+FuncName="UnaryOperatorBitwiseNot" Des="~" 
+FuncName="UnaryOperatorIsNull" Des="是空值" 
+FuncName="UnaryOperatorMinus" Des="-" 
+FuncName="Ascii" Des="Ascii码" 
+FuncName="Ceiling" Des="最小整数值" 
+FuncName="Floor" Des="最大整数值" 
+
+
+//逻辑运算
+FuncName="Iif" Des="如果" 
+FuncName="?" Des="三目运算符" 
+FuncName="Custom" Des="自定义" 
+...
